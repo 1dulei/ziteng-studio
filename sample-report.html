@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sample Report — New Solana Launches Risk Scan (2026-09-23) · ZiTeng Studio</title>
+<meta name="description" content="Free public on-chain risk scan of 10 newly launched Solana tokens. Bundler clusters, dev-team wallets, factory deployers. Real data, real addresses.">
+<style>
+:root{
+  --bg:#0b0e13; --panel:#12171f; --panel2:#171d27; --line:#242c38;
+  --txt:#e8edf4; --dim:#8b95a5;
+  --teal:#2dd4bf; --amber:#f5b544; --red:#f87171; --green:#4ade80;
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--txt);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Inter,Helvetica,Arial,sans-serif;line-height:1.65;font-size:15px}
+.wrap{max-width:900px;margin:0 auto;padding:32px 22px 60px}
+header{border-bottom:1px solid var(--line);padding-bottom:22px;margin-bottom:26px}
+.badge{display:inline-block;background:rgba(45,212,191,.12);color:var(--teal);border:1px solid rgba(45,212,191,.35);border-radius:20px;padding:2px 11px;font-size:12px;font-weight:600;margin-bottom:12px}
+h1{font-size:26px;margin:0 0 8px;letter-spacing:-.4px}
+.tagline{color:var(--dim);font-size:14.5px;margin:0}
+h2{font-size:19px;margin:36px 0 12px}
+h3{font-size:16px;margin:0 0 6px}
+.meta{color:var(--dim);font-size:12.5px;margin-top:10px}
+.case{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:20px;margin:16px 0}
+.case.red{border-left:4px solid var(--red)}
+.case.amber{border-left:4px solid var(--amber)}
+.case.green{border-left:4px solid var(--green)}
+.verdict{display:inline-block;border-radius:6px;padding:3px 12px;font-size:13px;font-weight:700;letter-spacing:.5px}
+.v-avoid{background:rgba(248,113,113,.15);color:var(--red);border:1px solid rgba(248,113,113,.4)}
+.v-watch{background:rgba(245,181,68,.15);color:var(--amber);border:1px solid rgba(245,181,68,.4)}
+.v-ok{background:rgba(74,222,128,.15);color:var(--green);border:1px solid rgba(74,222,128,.4)}
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:10px;margin:14px 0}
+.stat{background:var(--panel2);border:1px solid var(--line);border-radius:8px;padding:10px 12px}
+.stat .k{color:var(--dim);font-size:11.5px;text-transform:uppercase;letter-spacing:.5px}
+.stat .v{font-size:17px;font-weight:700;margin-top:2px}
+.stat .v.bad{color:var(--red)}
+.stat .v.warn{color:var(--amber)}
+.stat .v.good{color:var(--green)}
+table{width:100%;border-collapse:collapse;font-size:13px;margin:12px 0}
+th,td{padding:7px 9px;border-bottom:1px solid var(--line);text-align:left}
+th{color:var(--dim);font-size:11.5px;text-transform:uppercase;letter-spacing:.5px}
+tr:last-child td{border-bottom:none}
+td.mono,span.mono{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:12px}
+.tag{display:inline-block;background:var(--panel2);border:1px solid var(--line);border-radius:4px;padding:1px 6px;font-size:11px;color:var(--dim);margin-right:3px}
+.tag.hot{border-color:rgba(248,113,113,.5);color:var(--red)}
+.finding{border-left:3px solid var(--teal);background:var(--panel2);padding:10px 14px;margin:10px 0;font-size:14px;border-radius:0 8px 8px 0}
+.finding b{color:var(--teal)}
+ul{padding-left:20px;font-size:14px}
+li{margin:5px 0}
+.cta{background:linear-gradient(180deg,rgba(45,212,191,.08),var(--panel));border:1px solid rgba(45,212,191,.4);border-radius:12px;padding:22px;margin-top:34px}
+.cta h2{margin:0 0 8px}
+.price{font-size:26px;font-weight:700;color:var(--teal)}
+.btn{display:inline-block;background:var(--teal);color:#06231f;font-weight:700;border-radius:8px;padding:11px 20px;text-decoration:none;font-size:14.5px;margin-top:12px}
+.note{color:var(--dim);font-size:13px}
+.warn{color:var(--amber)}
+footer{margin-top:40px;border-top:1px solid var(--line);padding-top:16px;color:var(--dim);font-size:12.5px}
+a{color:var(--teal)}
+.rank{display:flex;flex-wrap:wrap;gap:8px;margin:14px 0}
+.rank div{background:var(--panel2);border:1px solid var(--line);border-radius:8px;padding:8px 12px;font-size:13px}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header>
+  <div class="badge">Free public sample · Real on-chain data</div>
+  <h1>New Solana Launches: Risk Scan</h1>
+  <p class="tagline">Ten tokens that launched in the last few hours, scanned for the things a chart can't show you — bundler clusters, dev-team wallets, and deployer track records.</p>
+  <p class="meta">Snapshot: 2026-09-23 15:45 UTC+8 · Solana · Data: GMGN on-chain API + DexScreener · This is a real report, not a template.</p>
+</header>
+
+<h2>The short version</h2>
+<p>I pulled every token that appeared on DexScreener's newest profile feed, then checked each deployer's history and holder structure. Of ten, <b>two are deployer-factory tokens</b> (the wallet that created them has minted thousands of tokens), <b>one is controlled by a bundler cluster</b> with the dev team already selling, and one came out genuinely clean.</p>
+<div class="rank">
+  <div><b>2</b> avoid — factory deployer</div>
+  <div><b>1</b> avoid — bundler cluster</div>
+  <div><b>4</b> watch</div>
+  <div><b>3</b> no major flags</div>
+</div>
+
+<h2>Case 1 — GROKBOTIFY <span class="verdict v-avoid">AVOID</span></h2>
+<div class="case red">
+  <p class="meta mono">CsB8SdZ2wFNqLpBJ5deuW1vnYv9nHDg5LfLTpEp5pump · launched 07:19:50 UTC · 26 minutes before the snapshot</p>
+  <div class="stats">
+    <div class="stat"><div class="k">Market cap</div><div class="v">$107K</div></div>
+    <div class="stat"><div class="k">Liquidity</div><div class="v">$28K</div></div>
+    <div class="stat"><div class="k">Bundler share</div><div class="v bad">51.7%</div></div>
+    <div class="stat"><div class="k">Top-10 holds</div><div class="v warn">22.5%</div></div>
+    <div class="stat"><div class="k">Deployer's tokens</div><div class="v good">1</div></div>
+  </div>
+
+  <p>This one does not have a factory deployer. It has something worse for a buyer: <b>a single operator holding most of the early supply, and the dev team is already out the door.</b></p>
+
+  <div class="finding"><b>Finding 1 —</b> Fifteen of the top twenty holders carry the <span class="tag hot">bundler</span> flag. Their first buys all land between <b>07:19:07 and 07:19:11 UTC</b> — a 4-second window. Wallets that buy the same token inside four seconds are not fifteen independent buyers.</div>
+
+  <div class="finding"><b>Finding 2 —</b> The #2 and #3 holders are tagged <span class="tag hot">dev_team</span> <span class="tag hot">bundler</span> <span class="tag hot">sniper</span> and hold <b>4.44%</b> and <b>4.11%</b> — 8.55% combined, bought in the same 4-second window as the rest of the cluster.</div>
+
+  <div class="finding"><b>Finding 3 —</b> The #2 dev-team wallet has already sold <b>30%</b> of its position (1 buy, 1 sell) while sitting on a ~17x unrealised gain. Everyone else in the cluster has sold nothing. One wallet is distributing; the rest are holding the bag.</div>
+
+  <table>
+    <tr><th>#</th><th>Wallet</th><th>Share</th><th>Cost</th><th>Now</th><th>Sold</th><th>Flags</th></tr>
+    <tr><td>2</td><td class="mono">5eUnKVPoJu…</td><td>4.44%</td><td>$251</td><td>$4,067</td><td><b style="color:var(--red)">30%</b></td><td><span class="tag hot">dev_team</span><span class="tag hot">bundler</span><span class="tag hot">sniper</span></td></tr>
+    <tr><td>3</td><td class="mono">D42GAJydoH…</td><td>4.11%</td><td>$310</td><td>$3,766</td><td>0%</td><td><span class="tag hot">dev_team</span><span class="tag hot">bundler</span><span class="tag hot">sniper</span></td></tr>
+    <tr><td>4</td><td class="mono">8p32pLBzBK…</td><td>2.16%</td><td>$191</td><td>$1,981</td><td>0%</td><td><span class="tag hot">bundler</span><span class="tag hot">sniper</span></td></tr>
+    <tr><td>9</td><td class="mono">HEuQjBWVE5…</td><td>1.63%</td><td>$136</td><td>$1,492</td><td>0%</td><td><span class="tag hot">bundler</span><span class="tag hot">sniper</span></td></tr>
+    <tr><td>11</td><td class="mono">6mLvJYtrej…</td><td>1.47%</td><td>$162</td><td>$1,351</td><td>0%</td><td><span class="tag hot">bundler</span></td></tr>
+  </table>
+  <p class="note">Rows 5–8, 12–20 follow the same pattern: one buy, no sells, entry cost $139–$465, first buy inside the same 4-second window. Full list in the paid report.</p>
+
+  <p><b>Verdict:</b> Over half the early supply sits in one coordinated cluster, the deployer's own wallets are inside it, and distribution has started. Whatever this chart does next, you are trading against an opponent who already owns the board.</p>
+</div>
+
+<h2>Case 2 — RATBRAIN <span class="verdict v-avoid">AVOID</span></h2>
+<div class="case red">
+  <p class="meta mono">CwGLcEiTZJ2inndc8NBzKvsBBDGS1g613hWBFMxu3eiB · launched 07:21:53 UTC</p>
+  <div class="stats">
+    <div class="stat"><div class="k">Market cap</div><div class="v">$96K</div></div>
+    <div class="stat"><div class="k">Liquidity</div><div class="v">$27K</div></div>
+    <div class="stat"><div class="k">Deployer's tokens</div><div class="v bad">3,339</div></div>
+    <div class="stat"><div class="k">Bot / degen</div><div class="v bad">66.6%</div></div>
+    <div class="stat"><div class="k">Bundler share</div><div class="v bad">25.5%</div></div>
+  </div>
+  <div class="finding"><b>The number that matters:</b> the wallet that deployed this token has deployed <b>3,339 tokens</b>. This is not a project. It is one slot in a machine that mints tokens until one sticks.</div>
+  <p>Two-thirds of the holders are bot or degen wallets, a quarter of the supply was bought by bundlers, and the deployer holds none of it — the classic fingerprint of an operation that takes profit at launch and moves on. Compare that with the third case below: a deployer with a count of 1 behaves completely differently.</p>
+</div>
+
+<h2>Case 3 — UPTOBER <span class="verdict v-watch">WATCH</span></h2>
+<div class="case amber">
+  <p class="meta mono">8Vte25yt28L8BfLXm8DrzjSYEyaKX8yry6hRKRmX7FGd · launched 2026-09-22 15:41 UTC · ~16h old</p>
+  <div class="stats">
+    <div class="stat"><div class="k">Market cap</div><div class="v">$133K</div></div>
+    <div class="stat"><div class="k">Liquidity</div><div class="v">$33K</div></div>
+    <div class="stat"><div class="k">Holders</div><div class="v good">1,444</div></div>
+    <div class="stat"><div class="k">Deployer's tokens</div><div class="v good">1</div></div>
+    <div class="stat"><div class="k">Bundler share</div><div class="v good">3.3%</div></div>
+    <div class="stat"><div class="k">Bot / degen</div><div class="v warn">18.7%</div></div>
+  </div>
+  <p>This is the cleanest of the batch, and it is worth showing precisely because it is not dramatic. <b>Deployer count: 1.</b> Bundler share 3.3% against GROKBOTIFY's 51.7%. Top-10 at 17%, spread over 1,444 holders. No dev-team wallets in the top twenty, no coordinated entry window.</p>
+  <p>The one soft spot: 18.7% bot/degen wallets and 6.2% fresh wallets, which is normal for a 16-hour-old token but means the holder base is still shallow. Not a red flag — a reason to wait and re-scan in 24 hours rather than a reason to run.</p>
+  <p class="note"><b>Why include a token I'm not calling a scam?</b> Because a scanner that calls everything a rug is useless. Most tokens are not rugs. The job is to separate the two, and that only means something if I'm willing to say "this one looks fine" when it does.</p>
+</div>
+
+<h2>Method — what I actually check</h2>
+<ul>
+  <li><b>Deployer track record</b> — how many tokens has this wallet created? A count in the hundreds is a minting operation, not a team.</li>
+  <li><b>Entry-time clustering</b> — do the top holders' first buys land in the same few seconds? Independent buyers do not synchronise.</li>
+  <li><b>Bundler / sniper flags</b> — wallets that bought via bundle or in the first blocks, and what share of supply they hold.</li>
+  <li><b>Dev-team wallets inside the top holders</b> — and whether they have started selling.</li>
+  <li><b>Sell behaviour vs. hold behaviour</b> — who has taken money off the table while everyone else is still holding.</li>
+  <li><b>Liquidity against market cap</b> — what you could realistically exit with.</li>
+</ul>
+
+<div class="cta">
+  <h2>Want this run on a token you're actually holding?</h2>
+  <p>The scan above is free and public. A personal scan covers your token or wallet, goes deeper than the ten fields here — full holder cohort breakdown, funding graph between the cluster wallets, the deployer's other tokens and what happened to them — and comes back as a written report within 24 hours.</p>
+  <div class="price">$29 <span style="font-size:14px;color:var(--dim);font-weight:400">launch pricing · 24h delivery · pay in USDC</span></div>
+  <a class="btn" href="index.html">Order a scan →</a>
+  <p class="note" style="margin-top:12px">Or send the contract address to <a href="mailto:vsii6160@agent.qq.com">vsii6160@agent.qq.com</a> / DM <a href="https://x.com/ZiTeng23873">@ZiTeng23873</a>. No account needed.</p>
+</div>
+
+<p class="note warn">Every figure above is a snapshot taken at the timestamp shown and will have changed since. On-chain data is public and verifiable — each claim traces to an address or a transaction you can check yourself. Nothing here is financial advice, and a clean scan does not make any token safe.</p>
+
+<footer>
+ZiTeng Studio · <a href="index.html">Services &amp; pricing</a> · contact <a href="mailto:vsii6160@agent.qq.com">vsii6160@agent.qq.com</a> · X <a href="https://x.com/ZiTeng23873">@ZiTeng23873</a>
+</footer>
+
+</div>
+</body>
+</html>
